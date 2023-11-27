@@ -1,18 +1,34 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import SideMenu from './components/SideMenu' // Ditambahkan
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Home</h1>,
+    element: (
+      <div style={{ display: 'flex' }}>
+        <SideMenu /> {/* Ditambahkan */}
+        <h1>Home</h1>
+      </div>
+    ),
   },
   {
     path: 'task-list',
-    element: <h1>Task List</h1>,
+    element: (
+      <div style={{ display: 'flex' }}>
+        <SideMenu /> {/* Ditambahkan */}
+        <h1>Task List</h1>
+      </div>
+    ),
   },
   {
     path: 'task-progress',
-    element: <h1>Task Progress</h1>,
+    element: (
+      <div style={{ display: 'flex' }}>
+        <SideMenu /> {/* Ditambahkan */}
+        <h1>Task Progress</h1>
+      </div>
+    ),
   },
 ])
 
